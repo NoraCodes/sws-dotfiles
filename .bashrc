@@ -111,7 +111,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export EDITOR=vim
+export EDITOR=pyvim
+alias vi=pyvim
+export LC_ALL="en_US.UTF_8"
 
 #Don't print the big banner if we're root
 #if [ $(id -u) -eq 0 ];
@@ -122,3 +124,4 @@ export EDITOR=vim
 #        ~/weyland-yutani.sh
 #fi
 
+fish

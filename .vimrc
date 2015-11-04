@@ -14,3 +14,6 @@ set expandtab
 set incsearch " Search as we type
 set hlsearch " highlight all matches
 
+" Python completion
+filetype plugin on
+let g:pydiction_location = '/home/user/.vim/bundle/pydiction.vim/complete-dict' 
