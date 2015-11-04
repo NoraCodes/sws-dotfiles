@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 # Install pathogen
 echo "Downloading and installing pathogen..."
@@ -13,10 +13,7 @@ echo "Adding Python support."
 git clone https://github.com/rkulla/pydiction.git ~/.vim/bundle/pydiction.vim
 mv ~/.vim/bundle/pydiction.vim/after/ftplugin/ ~/.vim/
 
-# Link .vimrc and .bashrc
-echo "Installing .vimrc"
-mv ~/.vimrc ~/.vimrc.bak
-cp ./.vimrc ~/.vimrc
-echo "Installing .bashrc"
-mv ~/.bashrc ~/.bashrc.bak
-cp ./.bashrc ~/.bashrc
+# Install oh-my-zsh
+echo "Installing oh-my-zsh"
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
