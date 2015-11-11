@@ -123,5 +123,3 @@ export LC_ALL="en_US.UTF_8"
 #    else
 #        ~/weyland-yutani.sh
 #fi
-
-fish
