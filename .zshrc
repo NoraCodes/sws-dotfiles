@@ -53,7 +53,7 @@ plugins=(git nmap )
 
 # User configuration
 
-export GOPATH="~/projects/go-workspace"
+export GOPATH="$home/projects/go-workspace"
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$GOPATH/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
