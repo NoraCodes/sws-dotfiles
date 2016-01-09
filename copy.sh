@@ -13,6 +13,9 @@ cp ./.zshrc ~/.zshrc
 echo "Installing .gitconfig"
 mv ~/.gitconfig ~/.gitconfig.bak
 cp ./.gitconfig ~/.gitconfig
+echo "Installing .tmux.conf"
+mv ~/.tmux.conf ~/.tmux.conf.bak
+cp ./.tmux.conf ~/.tmux.conf
 
 echo "Installing .config/"
 echo "\tHexChat"
