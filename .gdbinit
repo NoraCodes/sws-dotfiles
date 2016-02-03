@@ -1,1 +1,1 @@
-set dissembly-flavor intel
+set dissassembly-flavor intel
