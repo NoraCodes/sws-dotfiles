@@ -19,6 +19,9 @@ cp ./.tmux.conf ~/.tmux.conf
 echo "Installing .gdbinit"
 mv ~/.gdbinit ~/.gdbinit.bak
 cp ./.gdbinit ~/.gdbinit
+echo "Installing .gitconfig"
+mv ~/.gitconfig ~/.gitconfig.bak
+cp ./gitconfig ~/.gitconfig
 
 echo "Installing .config/"
 echo "\tHexChat"
