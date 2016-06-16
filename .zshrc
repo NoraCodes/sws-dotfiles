@@ -1,5 +1,5 @@
 #Path to your oh-my-zsh installation.
-  export ZSH=/home/leo/.oh-my-zsh
+export ZSH=/home/leo/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -83,3 +83,4 @@ export EDITOR='vim'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias tmux='tmux -2'
