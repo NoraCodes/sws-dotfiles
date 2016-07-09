@@ -111,8 +111,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export EDITOR=pyvim
-alias vi=pyvim
+export EDITOR=vim
+alias vi=vim
 export LC_ALL="en_US.UTF_8"
 
 #Don't print the big banner if we're root
