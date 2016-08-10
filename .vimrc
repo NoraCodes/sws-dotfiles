@@ -26,3 +26,5 @@ set hlsearch " highlight all matches
 " filetype based plugins
 filetype plugin on
 filetype plugin indent on
+
+set background=dark
