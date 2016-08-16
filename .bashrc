@@ -114,6 +114,9 @@ fi
 export EDITOR=vim
 alias vi=vim
 export LC_ALL="en_US.UTF_8"
+alias fdate="date +%y.%m.%d"
+
+export RUST_SRC_PATH=/home/leo/software/rustc-nightly/src
 
 #Don't print the big banner if we're root
 #if [ $(id -u) -eq 0 ];
@@ -123,3 +126,4 @@ export LC_ALL="en_US.UTF_8"
 #    else
 #        ~/weyland-yutani.sh
 #fi
+#export TERM="screen-256color"
