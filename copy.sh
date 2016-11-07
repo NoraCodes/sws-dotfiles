@@ -22,6 +22,10 @@ cp ./.gdbinit ~/.gdbinit
 echo "Installing .gitconfig"
 mv ~/.gitconfig ~/.gitconfig.bak
 cp ./gitconfig ~/.gitconfig
+echo "Installing .jrnl_config"
+mv ~/.jrnl_config ~/.jrnl_config.bak
+cp ./.jrnl_config ~/.jrnl_config
+
 
 echo "Installing .config/"
 echo "\tHexChat"
