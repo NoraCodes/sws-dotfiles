@@ -14,7 +14,7 @@ set $SHOWCPUREGISTERS = 1
 # set to 1 to enable display of stack (default is 0)
 set $SHOWSTACK = 1
 # set to 1 to enable display of data window (default is 0)
-set $SHOWDATAWIN = 1
+set $SHOWDATAWIN = 0
 # set to 0 to disable colored display of changed registers
 set $SHOWREGCHANGES = 1
 # set to 1 so skip command to execute the instruction at the new location
@@ -26,7 +26,7 @@ set $SKIPSTEP = 1
 # show the ARM opcodes - change to 0 if you don't want such thing (in x/i command)
 set $ARMOPCODES = 1
 # x86 disassembly flavor: 0 for Intel, 1 for AT&T
-set $X86FLAVOR = 1
+set $X86FLAVOR = 0
 # use colorized output or not
 set $USECOLOR = 1
 # to use with remote KDP

@@ -6,6 +6,10 @@ set title " Allow VIM to retitle the terminal
 " Better escape sequence
 inoremap jk <Esc> 
 
+" Better line movement
+:nnoremap j gj
+:nnoremap k gk
+
 set number " Show line numbers
 set relativenumber " Relative numbers for all but the current line
 
