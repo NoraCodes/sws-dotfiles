@@ -1,4 +1,3 @@
-
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # If not running interactively, don't do anything
 case $- in
@@ -116,14 +115,4 @@ alias vi=vim
 export LC_ALL="en_US.UTF_8"
 alias fdate="date +%y.%m.%d"
 
-export RUST_SRC_PATH=/home/leo/software/rustc-nightly/src
-
-#Don't print the big banner if we're root
-#if [ $(id -u) -eq 0 ];
-#    then # you are root, print the warning
-#        echo -e "\e[01;31mRoot (Mode R) privelages granted."
-#        echo -e "Weyland-Yutani Corp. reminds you that with great power comes great responsibility. \e[00m"
-#    else
-#        ~/weyland-yutani.sh
-#fi
-#export TERM="screen-256color"
+export TERM="screen-256color"
