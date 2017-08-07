@@ -15,6 +15,10 @@ echo "Installing zshrc"
 mv ~/.zshrc ~/.zshrc.bak
 ln -s $cdir/zshrc ~/.zshrc
 
+echo "Installing zsh completions"
+mv ~/.zfunc ~/.zfunc.bak
+ln -s $cdir/zfunc ~/.zfunc 
+
 echo "Installing gitconfig"
 mv ~/.gitconfig ~/.gitconfig.bak
 ln -s $cdir/gitconfig ~/.gitconfig
@@ -27,6 +31,7 @@ echo "Installing gdbinit"
 mv ~/.gdbinit ~/.gdbinit.bak
 ln -s $cdir/gdbinit ~/.gdbinit
 
-echo "Installing xfce4 terminalrc"
+echo "Installing xfce4 terminalrc (COPY)"
 mv ~/.config/xfce4/terminal/terminalrc ~/.config/xfce4/terminal/terminalrc.bak
 ln -s $cdir/config/xfce4/terminal/terminalrc ~/.config/xfce4/terminal/terminalrc
+
