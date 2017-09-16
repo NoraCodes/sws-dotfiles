@@ -8,6 +8,10 @@ echo "Installing vimrc"
 mv ~/.vimrc ~/.vimrc.bak
 ln -s $(pwd)/vimrc ~/.vimrc
 
+echo "Installing vim plugins"
+mv ~/.vim ~/.vim.bak
+ln -s $cdir/vim ~/.vim
+
 echo "Installing bashrc"
 mv ~/.bashrc ~/.bashrc.bak
 ln -s $cidr/bashrc ~/.bashrc
