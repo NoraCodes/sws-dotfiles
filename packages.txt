@@ -1,5 +1,4 @@
 git
-audacity
 curl
 ffmpeg
 filezilla
@@ -18,3 +17,5 @@ rhythmbox
 tmux
 vim
 zsh
+sakura
+

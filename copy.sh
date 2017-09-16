@@ -40,6 +40,10 @@ echo "Installing xfce4 terminalrc"
 mv ~/.config/xfce4/terminal/terminalrc ~/.config/xfce4/terminal/terminalrc.bak
 ln -s $cdir/config/xfce4/terminal/terminalrc ~/.config/xfce4/terminal/terminalrc
 
+echo "Installing Sakura terminal config"
+mv ~/.config/sakura ~/.config/sakura.bak
+ln -s $cdir/config/sakura ~/.config/sakura
+
 echo "Installing i3wm config"
 mv ~/.config/i3 ~/.config/i3.bak
 ln -s $cdir/config/i3 ~/.config/i3
