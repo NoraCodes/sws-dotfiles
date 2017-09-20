@@ -44,6 +44,10 @@ echo "Installing Sakura terminal config"
 mv ~/.config/sakura ~/.config/sakura.bak
 ln -s $cdir/config/sakura ~/.config/sakura
 
+echo "Installing alacritty terminal config"
+mv ~/.config/alacritty ~/.config/alacritty.bak
+ln -s $cdir/config/alacritty ~/.config/alacritty
+
 echo "Installing i3wm config"
 mv ~/.config/i3 ~/.config/i3.bak
 ln -s $cdir/config/i3 ~/.config/i3

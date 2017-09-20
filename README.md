@@ -17,5 +17,7 @@ Scripts, configs, and dotfiles needed for my desktop and laptop setups.
 * GDB
 * Bash
 * XFCE4 terminal
+* Sakura terminal
+* Alacritty terminal
 * i3wm
 
