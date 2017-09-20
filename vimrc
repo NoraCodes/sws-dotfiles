@@ -75,17 +75,6 @@ set expandtab " Turn spaces into tabs
 set ai " autoindent
 set si " smart indent
 set wrap " wrap lines
-" -------- Removing extra spaces
-fun! CleanExtraSpaces()
-    let save_cursor = getpos(".")
-    let old_query = getreg("/")
-    silent! %s/\s\+$//e
-    call setpos(".", save_cursor)
-    call setreg("/", old_query)
-endfun
-if has ("autocmd")
-    autocmd BufWritePre *.txt *.js *.jsx *.py *.sh *.rs *.toml :call CleanExtraSpaces()
-endif
 
 " Syntax and spelling  ---------------------------------------------- 
 " -------- Syntastic
