@@ -19,3 +19,8 @@ vim
 zsh
 sakura
 
+
+i3
+polybar
+unifont
+# emojione https://github.com/eosrei/emojione-color-font/releases/
