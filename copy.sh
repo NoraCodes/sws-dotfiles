@@ -52,3 +52,7 @@ echo "Installing i3wm config"
 mv ~/.config/i3 ~/.config/i3.bak
 ln -s $cdir/config/i3 ~/.config/i3
 
+echo "Installing i3wm config"
+mv ~/.config/polybar ~/.config/polybar.bak
+ln -s $cdir/config/polybar ~/.config/polybar
+
