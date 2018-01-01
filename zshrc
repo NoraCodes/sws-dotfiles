@@ -49,7 +49,7 @@ ZSH_THEME="junkfood"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git nmap tmux)
+plugins=(thefuck git nmap tmux)
 
 # User configuration
 export GOPATH="$HOME/projects/go-workspace"
@@ -64,7 +64,6 @@ export LANG=en_US.UTF-8
 export EDITOR='vim'
 
 alias tmux='tmux -2'
-
 
 # tmux config
 ZSH_TMUX_FIXTERM=true

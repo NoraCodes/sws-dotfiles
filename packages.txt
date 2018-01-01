@@ -23,4 +23,5 @@ sakura
 i3
 polybar
 unifont
+# variety http://peterlevi.com/variety/
 # emojione https://github.com/eosrei/emojione-color-font/releases/

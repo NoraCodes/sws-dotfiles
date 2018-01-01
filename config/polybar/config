@@ -34,9 +34,9 @@ module-margin-right = 2
 font-0 = "Ubuntu:size=10;0"
 font-1 = "Unifont:size 10;0"
 font-2 = "EmojiOneColor: size 12;0"
-modules-left = date
-modules-center = i3
-modules-right = volume filesystem memory cpu wlan eth battery0 battery1
+modules-left = i3
+modules-center = cpu memory filesystem wlan eth battery0 battery1
+modules-right = volume date
 tray-position = right
 tray-padding = 2
 bottom = true
@@ -78,9 +78,9 @@ format-volume-underline = #ff993f
 
 [module/filesystem]
 type = internal/fs
-interval = 25
+interval = 30
 mount-0 = /
-label-mounted = %mountpoint%: %free%
+label-mounted = %free% free
 label-unmounted = %mountpoint%: not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 format-mounted-underline = #80f4ff
@@ -88,8 +88,8 @@ format-mounted-underline = #80f4ff
 
 [module/memory]
 type = internal/memory
-interval = 5
-format-prefix = "M: "
+interval = 2
+format-prefix = "RAM "
 format-prefix-foreground = ${colors.foreground}
 format-underline = #ff4f4f
 label = %percentage_used%%
@@ -97,8 +97,8 @@ label = %percentage_used%%
 
 [module/cpu]
 type = internal/cpu
-interval = 5
-format-prefix = "C: "
+interval = 1
+format-prefix = "CPU "
 format-prefix-foreground = ${colors.foreground}
 format-underline = #4fff4f
 label = %percentage%%
@@ -130,26 +130,34 @@ label-disconnected-foreground = ${colors.foreground-alt}
 type = internal/battery
 battery = BAT0
 adapter = AC
-full-at = 100 
+full-at = 96 
+
 label-charging = 0⚡%percentage%%
 format-charging = <label-charging>
 format-charging-underline = #ffb52a
+
+format-discharging-prefix = "0🔋"
 format-discharging = <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
-format-full-prefix = "0 FULL: " 
+
+format-full-prefix = "0🔋" 
 format-full-underline = ${self.format-charging-underline}
 
 [module/battery1]
 type = internal/battery
 battery = BAT1
 adapter = AC
-full-at = 100 
+full-at = 98 
+
 label-charging = 1⚡%percentage%%
 format-charging = <label-charging>
 format-charging-underline = #ffb52a
+
+format-discharging-prefix = "1🔋"
 format-discharging = <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
-format-full-prefix = "0 FULL: " 
+
+format-full-prefix = "1🔋" 
 format-full-underline = ${self.format-charging-underline}
 
 [module/date]

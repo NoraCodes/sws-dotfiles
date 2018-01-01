@@ -12,7 +12,8 @@ font pango:Noto Mono 10
 new_window pixel 2
 new_float pixel 2
 
-# BINDINGS ===============================================================
+# BINDINGS ==============================================================
+# Windows key
 set $mod Mod4
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -24,6 +25,7 @@ bindsym $mod+Return exec sakura
 # kill focused window
 bindsym $mod+Shift+q kill
 
+
 # ROFI ===========
 set $rofiopts -bw 3 -font "Noto Mono 14" -lines 4 -width 50 -levenshtein-sort
 
@@ -33,7 +35,14 @@ bindsym $mod+d exec rofi -show drun $rofiopts
 bindsym $mod+Shift+d exec rofi -show run $rofiopts
 
 # start rofi (program lanucher) in window switcher mode
-bindsym $mod+w exec rofi -show window $rofiopts
+# bindsym $mod+w exec rofi -show window $rofiopts
+
+# ROFIMOJI ========
+# Does not obey rofiopts :(
+# sudo apt install python3 fonts-emojione xsel xdotool
+# update this from time to time.
+bindsym $mod+i exec ~/.rofimoji.py
+
 
 # FOCUS =======
 # change focus (Vim bindings)
@@ -141,17 +150,21 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-#bar {
-#        status_command i3status
-#}
+## APPLICATIONS
+
+# Pin comms apps to the right
+assign [class="Hexchat"] 8
+assign [class="Thunderbird"] 9
+assign [class="TelegramDesktop"] 10
 
 # compositor
 exec compton -CGb
 
 # background
-exec nitrogen --restore
+exec_always --no-startup-id variety -n
+# Change the wallpaper
+bindsym $mod+Shift+n exec --no-startup-id variety -n
 
 # polybar
 exec_always --no-startup-id killall polybar; polybar main
+
