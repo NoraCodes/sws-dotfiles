@@ -71,3 +71,6 @@ ZSH_TMUX_FIXTERM=true
 # Completions
 fpath+=~/.zfunc
 compinit
+
+# added by travis gem
+[ -f /home/leo/.travis/travis.sh ] && source /home/leo/.travis/travis.sh
