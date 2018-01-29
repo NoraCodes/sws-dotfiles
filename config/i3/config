@@ -27,12 +27,17 @@ bindsym $mod+Shift+q kill
 
 
 # ROFI ===========
-set $rofiopts -bw 3 -font "Noto Mono 14" -lines 4 -width 50 -levenshtein-sort
+# set $rofiopts -bw 3 -font "Noto Mono 14" -lines 4 -width 50 -show-icons -matching fuzzy 
+set $rofiopts -show-icons -matching fuzzy
+set $rofitheme -theme ~/.config/i3/arthur.rasi
 
 # start rofi (program launcher) in desktop files mode
-bindsym $mod+d exec rofi -show drun $rofiopts
+bindsym $mod+d exec rofi -show drun $rofiopts $rofitheme
 #   or dmenu mode
-bindsym $mod+Shift+d exec rofi -show run $rofiopts
+bindsym $mod+Shift+d exec rofi -show run $rofiopts $rofitheme
+
+# start rofi to show SSH hosts
+bindsym $mod+s exec rofi -show ssh $rofiopts
 
 # start rofi (program lanucher) in window switcher mode
 # bindsym $mod+w exec rofi -show window $rofiopts
@@ -44,7 +49,24 @@ bindsym $mod+Shift+d exec rofi -show run $rofiopts
 bindsym $mod+i exec ~/.rofimoji.py
 
 
-# FOCUS =======
+# FOCUS / TILING =======
+# split in horizontal orientation
+bindsym $mod+Shift+f split h
+
+# split in vertical orientation
+bindsym $mod+Shift+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+#bindsym $mod+s layout stacking
+# bindsym $mod+w layout tabbed
+#bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
 # change focus (Vim bindings)
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -66,23 +88,6 @@ bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
-
-# split in horizontal orientation
-bindsym $mod+Shift+f split h
-
-# split in vertical orientation
-bindsym $mod+Shift+v split v
-
-# enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
-
-# change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-# bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
-
-# toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -153,11 +158,12 @@ bindsym $mod+r mode "resize"
 ## APPLICATIONS
 
 # Pin comms apps to the right
+assign [class="Discord"] 7
 assign [class="Hexchat"] 8
 assign [class="Thunderbird"] 9
 assign [class="TelegramDesktop"] 10
 
-# compositor
+# compositor, for transparency
 exec compton -CGb
 
 # background

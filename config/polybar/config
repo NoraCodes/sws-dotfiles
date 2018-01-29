@@ -1,8 +1,8 @@
 [colors]
-background = #222
-background-alt = #444
-foreground = #dfdfdf
-foreground-alt = #55
+background = #111
+background-alt = #333
+foreground = #ddd
+foreground-alt = #ccc
 primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
@@ -15,7 +15,7 @@ margin-bottom = 3
 
 [bar/main]
 width = 100%
-height = 27
+height = 24
 offset-x = 0
 offset-y = 0
 background = ${colors.background}
@@ -24,13 +24,13 @@ overline-size = 2
 overline-color = #f00
 underline-size = 2
 underline-color = #00f
-border-bottom = 2
+border-bottom = 0
 border-bottom-color = #333
 spacing = 1
 padding-left =
 padding-right =
-module-margin-left = 2
-module-margin-right = 2
+module-margin-left = 1
+module-margin-right = 1
 font-0 = "Ubuntu:size=10;0"
 font-1 = "Unifont:size 10;0"
 font-2 = "EmojiOneColor: size 12;0"
