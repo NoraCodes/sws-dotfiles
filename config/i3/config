@@ -8,9 +8,20 @@
 # is used in the bar {} block below.
 font pango:Noto Mono 10
 
-# No titlebar
-new_window pixel 2
-new_float normal 2
+# With titlebar - non i3-gaps
+# new_window pixel 2
+# new_float normal 2
+
+# No titlebar - i3-gaps
+new_window pixel 0
+new_float pixel 0
+for_window [class="^.*"] border pixel 0
+
+# Gaps config
+smart_gaps on
+smart_borders on
+gaps inner 5
+gaps outer 0
 
 # BINDINGS ==============================================================
 # Windows key
