@@ -1,19 +1,11 @@
 git
 curl
-ffmpeg
-filezilla
-handbrake
 hexchat
-kdenlive
-keepass2
 mono-complete
 mono-mcs
-pinta
 python-pip
 python3
 python3-pip
-qtcreator
-rhythmbox
 tmux
 vim
 zsh
@@ -25,3 +17,5 @@ polybar
 unifont
 # variety http://peterlevi.com/variety/
 # emojione https://github.com/eosrei/emojione-color-font/releases/
+# ion shell
+# cargo install --git https://github.com/redox-os/ion/
