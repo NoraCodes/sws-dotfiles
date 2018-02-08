@@ -1,17 +1,29 @@
 [colors]
-background = #111
-background-alt = #333
+# background of the bar
+background = #263238
+# background for highlighted elements
+background-alt = #49555B
+
+# primary foreground color
 foreground = #ddd
-foreground-alt = #ccc
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
+# highlight foreground color
+foreground-alt = #fff
+
+mut_red = #f36
+mut_grn = #3f6
+mut_blu = #36f
+mut_ylo = #aa2
+
+primary = ${colors.mut_blu}
+secondary = ${colors.mut_red}
+tertiary = ${colors.mut_grn}
+alert = ${colors.mut_red}
+error = ${colors.mut_ylo}
 
 
 [global/wm]
 margin-top = 3
 margin-bottom = 3
-
 
 [bar/main]
 width = 100%
@@ -21,11 +33,9 @@ offset-y = 0
 background = ${colors.background}
 foreground = ${colors.foreground}
 overline-size = 2
-overline-color = #f00
+overline-color = ${colors.primary}
 underline-size = 2
-underline-color = #00f
-border-bottom = 0
-border-bottom-color = #333
+underline-color = ${colors.tertiary}
 spacing = 1
 padding-left =
 padding-right =
@@ -48,20 +58,25 @@ type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
+
 label-mode = %mode%
 label-mode-padding = 2
-label-mode-foreground = #000
-label-mode-background = ${colors.primary}
-label-focused = %index%
+label-mode-foreground = ${colors.foreground-alt}
+label-mode-background = ${colors.alert}
+
+label-focused = %name%
 label-focused-background = ${colors.background-alt}
 label-focused-underline = ${colors.primary}
 label-focused-padding = 2
-label-unfocused = %index%
+
+label-unfocused = %name%
 label-unfocused-padding = 2
-label-urgent = %index%
+
+label-urgent = %name%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
-label-visible = %index%
+
+label-visible = %name%
 label-visible-foreground = 2
 label-visible-padding = 2
 
@@ -71,9 +86,9 @@ type = internal/volume
 format-volume = <label-volume>
 label-volume = "🔊 %percentage%%"
 label-volume-foreground = ${root.foreground}
-format-muted-foreground = ${colors.foreground-alt}
+format-muted-foreground = ${colors.foreground}
 label-muted = "🔇muted"
-format-volume-underline = #ff993f
+format-volume-underline = ${colors.primary}
 
 
 [module/filesystem]
@@ -83,7 +98,7 @@ mount-0 = /
 label-mounted = %free% free
 label-unmounted = %mountpoint%: not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
-format-mounted-underline = #80f4ff
+format-mounted-underline = ${colors.primary}
 
 
 [module/memory]
@@ -91,7 +106,7 @@ type = internal/memory
 interval = 2
 format-prefix = "RAM "
 format-prefix-foreground = ${colors.foreground}
-format-underline = #ff4f4f
+format-underline = ${colors.primary}
 label = %percentage_used%%
 
 
@@ -100,7 +115,7 @@ type = internal/cpu
 interval = 1
 format-prefix = "CPU "
 format-prefix-foreground = ${colors.foreground}
-format-underline = #4fff4f
+format-underline = ${colors.primary}
 label = %percentage%%
 
 [module/wlan]
@@ -108,8 +123,8 @@ type = internal/network
 interface = wlp3s0
 interval = 5
 format-connected = <label-connected>
-format-connected-underline = #55aa55
-format-disconnected-underline = ${self.format-connected-underline}
+format-connected-underline = ${colors.primary}
+format-disconnected-underline = ${colors.alert}
 label-connected = "WiFi: %essid%"
 label-disconnected = "WiFi: down"
 label-disconnected-foreground = ${colors.foreground-alt}
@@ -118,11 +133,11 @@ label-disconnected-foreground = ${colors.foreground-alt}
 type = internal/network
 interface = enp0s25
 interval = 5
-format-connected-underline = #55aa55
+format-connected-underline = ${colors.primary}
 format-connected-prefix = "Eth: "
 format-connected-foreground-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
-format-disconnected-underline = ${self.format-connected-underline}
+format-disconnected-underline = ${colors.alert}
 label-disconnected = "Eth: down"
 label-disconnected-foreground = ${colors.foreground-alt}
 
@@ -134,14 +149,14 @@ full-at = 96
 
 label-charging = 0⚡%percentage%%
 format-charging = <label-charging>
-format-charging-underline = #ffb52a
+format-charging-underline = ${colors.primary}
 
 format-discharging-prefix = "0🔋"
 format-discharging = <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
+format-discharging-underline = ${colors.secondary}
 
 format-full-prefix = "0🔋" 
-format-full-underline = ${self.format-charging-underline}
+format-full-underline = ${colors.primary}
 
 [module/battery1]
 type = internal/battery
@@ -151,19 +166,19 @@ full-at = 98
 
 label-charging = 1⚡%percentage%%
 format-charging = <label-charging>
-format-charging-underline = #ffb52a
+format-charging-underline = ${colors.primary}
 
 format-discharging-prefix = "1🔋"
 format-discharging = <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
+format-discharging-underline = ${colors.secondary}
 
 format-full-prefix = "1🔋" 
-format-full-underline = ${self.format-charging-underline}
+format-full-underline = ${colors.primary}
 
 [module/date]
 type = internal/date
 interval = 5
 date = " 📅 %a %m/%d/%y"
 time = " ⏰ %l:%M %P"
-format-underline = #0a6cf5
+format-underline = ${colors.primary}
 label = %date% %time%

@@ -10,6 +10,7 @@ tmux
 vim
 zsh
 sakura
+glances
 
 
 i3

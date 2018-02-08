@@ -119,28 +119,28 @@ bindsym $mod+x move workspace to output right
 bindsym $mod+Shift+x move workspace to output left
 
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+1 workspace number 1 main
+bindsym $mod+2 workspace number 2 code
+bindsym $mod+3 workspace number 3 test
+bindsym $mod+4 workspace number 4 code
+bindsym $mod+5 workspace number 5 buf1
+bindsym $mod+6 workspace number 6 buf2
+bindsym $mod+7 workspace number 7 disc
+bindsym $mod+8 workspace number 8 xirc
+bindsym $mod+9 workspace number 9 mail
+bindsym $mod+0 workspace number 10 moni
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+1 move container to workspace 1 main
+bindsym $mod+Shift+2 move container to workspace 2 code
+bindsym $mod+Shift+3 move container to workspace 3 test
+bindsym $mod+Shift+4 move container to workspace 4 code
+bindsym $mod+Shift+5 move container to workspace 5 buf1
+bindsym $mod+Shift+6 move container to workspace 6 buf2
+bindsym $mod+Shift+7 move container to workspace 7 disc
+bindsym $mod+Shift+8 move container to workspace 8 xirc
+bindsym $mod+Shift+9 move container to workspace 9 mail
+bindsym $mod+Shift+0 move container to workspace 10 moni
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -178,10 +178,10 @@ bindsym $mod+r mode "resize"
 ## APPLICATIONS
 
 # Pin comms apps to the right
-assign [class="Discord"] 7
-assign [class="Hexchat"] 8
-assign [class="Thunderbird"] 9
-assign [class="TelegramDesktop"] 10
+assign [class="Discord"] 7 disc
+assign [class="Hexchat"] 8 xirc
+assign [class="TelegramDesktop"] 8 xirc
+assign [class="Thunderbird"] 9 mail
 
 # compositor, for transparency
 exec compton -CGb
@@ -197,3 +197,8 @@ exec_always --no-startup-id feh --bg-scale $HOME/.config/background.png
 # polybar
 exec_always --no-startup-id killall polybar; polybar main
 
+# system monitor
+exec --no-startup-id sakura -x glances
+
+# default workspace
+exec --no-startup-id i3-msg "workspace 1 main"
