@@ -8,6 +8,11 @@ Scripts, configs, and dotfiles needed for my desktop and laptop setups.
 * `tarsnap-backup.sh` backs up files to tarsnap
 * `huion-fix.sh` maps a Huion tablet to a single monitor
 
+## Themes to use
+
+* `adapta-gtk-theme` with the Adapta Nokto theme selected
+* `numix-icon-theme` with the default Numix theme selected
+
 ## Dotfiles for configuring...
 
 * ZSH (including some completions)
