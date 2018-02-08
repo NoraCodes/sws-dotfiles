@@ -109,6 +109,15 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+# xrandr bindings
+# fn+f7 = use VGA
+# mod+fm+f7 = don't use VGA
+# mod+x move workspace to output
+bindsym XF86Display exec --no-startup-id xrandr --output VGA-1 --auto --right-of LVDS-1
+bindsym $mod+XF86Display exec --no-startup-id xrandr --output VGA-1 --off
+bindsym $mod+x move workspace to output right
+bindsym $mod+Shift+x move workspace to output left
+
 # switch to workspace
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
@@ -178,9 +187,12 @@ assign [class="TelegramDesktop"] 10
 exec compton -CGb
 
 # background
-exec_always --no-startup-id variety -n
+# exec_always --no-startup-id variety -n
 # Change the wallpaper
-bindsym $mod+Shift+n exec --no-startup-id variety -n
+# bindsym $mod+Shift+n exec --no-startup-id variety -n
+
+# lightweight background
+exec_always --no-startup-id feh --bg-scale $HOME/.config/background.png
 
 # polybar
 exec_always --no-startup-id killall polybar; polybar main

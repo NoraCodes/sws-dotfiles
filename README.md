@@ -21,3 +21,11 @@ Scripts, configs, and dotfiles needed for my desktop and laptop setups.
 * Alacritty terminal
 * i3wm
 
+
+## Requires by default:
+
+* zsh
+* sakura
+* feh
+* put your background in $HOME/.config/background.png
+
