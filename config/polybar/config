@@ -1,22 +1,22 @@
 [colors]
 # background of the bar
-background = #263238
+background = #A4A
 # background for highlighted elements
-background-alt = #49555B
+background-alt = #616
 
 # primary foreground color
-foreground = #ddd
+foreground = #DED
 # highlight foreground color
-foreground-alt = #fff
+foreground-alt = #FFF
 
 mut_red = #f36
 mut_grn = #3f6
 mut_blu = #36f
 mut_ylo = #aa2
 
-primary = ${colors.mut_blu}
+primary = ${colors.mut_grn}
 secondary = ${colors.mut_red}
-tertiary = ${colors.mut_grn}
+tertiary = ${colors.mut_blu}
 alert = ${colors.mut_red}
 error = ${colors.mut_ylo}
 

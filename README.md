@@ -10,7 +10,7 @@ Scripts, configs, and dotfiles needed for my desktop and laptop setups.
 
 ## Themes to use
 
-* `adapta-gtk-theme` with the Adapta Nokto theme selected
+* Adapta Pink Eta theme selected
 * `numix-icon-theme` with the default Numix theme selected
 
 ## Dotfiles for configuring...
