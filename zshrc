@@ -74,3 +74,8 @@ compinit
 
 # added by travis gem
 [ -f /home/leo/.travis/travis.sh ] && source /home/leo/.travis/travis.sh
+
+# To execute on new shell creation
+#   Cowsay~
+fortune | cowsay -f $(ls /usr/share/cowsay/cows/ | shuf -n1)
+mdt8 status
