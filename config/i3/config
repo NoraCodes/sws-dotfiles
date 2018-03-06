@@ -18,10 +18,10 @@ new_float pixel 0
 for_window [class="^.*"] border pixel 0
 
 # Gaps config
-smart_gaps on
+# smart_gaps on
 smart_borders on
 gaps inner 5
-gaps outer 0
+gaps outer 5
 
 # BINDINGS ==============================================================
 # Windows key
