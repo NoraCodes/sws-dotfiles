@@ -12,6 +12,8 @@ zsh
 sakura
 glances
 
+anonymous-pro ttf-dejavu ttf-dejavu-extra fonts-emojione-svginot
+
 
 i3
 polybar
@@ -20,3 +22,4 @@ unifont
 # emojione https://github.com/eosrei/emojione-color-font/releases/
 # ion shell
 # cargo install --git https://github.com/redox-os/ion/
+
