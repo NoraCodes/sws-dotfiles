@@ -98,3 +98,18 @@ inoremap jk <Esc>
 " 0 goes to the first non-blank
 map 0 ^
 
+" -------- CtrlP Plugin Searching
+let g:ctrlp_map = '<c-p>'  " CtrlP main command
+let g:ctrlp_cmd = 'CtrlP' " What to execute when that's pressed
+let g:ctrlp_working_path_mode = 'ra' " Where to look for files (whole repository)
+
+" --------- EasyMotion bindings
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+" Turn on case insensitive feature
+let g:EasyMotion_smartcase = 1
+" s{char}{label} for basic jumping
+nmap s <Plug>(easymotion-overwin-f)
+" Line movement
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+
