@@ -7,6 +7,11 @@ Scripts, configs, and dotfiles needed for my desktop and laptop setups.
 * `copy.sh` creates symlinks to config files. 
 * `tarsnap-backup.sh` backs up files to tarsnap
 * `huion-fix.sh` maps a Huion tablet to a single monitor
+* `rofimoji.py` is the original RofiMoji script
+* `emoji-to-scl.py` will take the rofimoji emoji list (from EmojiPedia) into
+    special_character_list format
+* `special_characters.sh` uses Rofi or DMenu to pick special characters from
+    `special_characters_list`.
 
 ## Themes to use
 

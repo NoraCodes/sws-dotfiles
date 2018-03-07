@@ -53,11 +53,11 @@ bindsym $mod+s exec rofi -show ssh $rofiopts
 # start rofi (program lanucher) in window switcher mode
 # bindsym $mod+w exec rofi -show window $rofiopts
 
-# ROFIMOJI ========
-# Does not obey rofiopts :(
+# ROFIMOJI/special_charaters ========
 # sudo apt install python3 fonts-emojione xsel xdotool
 # update this from time to time.
-bindsym $mod+i exec ~/.rofimoji.py
+# bindsym $mod+i exec ~/.rofimoji.py
+bindsym $mod+i exec ~/Projects/sws-dotfiles/special_characters.sh $rofiopts $rofitheme
 
 
 # FOCUS / TILING =======
