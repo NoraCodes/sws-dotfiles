@@ -41,9 +41,9 @@ padding-left =
 padding-right =
 module-margin-left = 1
 module-margin-right = 1
-font-0 = "Ubuntu:size=10;0"
-font-1 = "Unifont:size 10;0"
-font-2 = "EmojiOneColor: size 12;0"
+font-0 = "Ubuntu: size=10;0"
+font-1 = "Ubuntu Mono: size=10;0"
+#font-2 = "EmojiOne: size=10;0"
 modules-left = i3
 modules-center = cpu memory filesystem wlan eth battery0 battery1
 modules-right = volume date
@@ -84,11 +84,12 @@ label-visible-padding = 2
 [module/volume]
 type = internal/volume
 format-volume = <label-volume>
-label-volume = "🔊 %percentage%%"
+label-volume = "[V]  %percentage%%"
 label-volume-foreground = ${root.foreground}
 format-muted-foreground = ${colors.foreground}
-label-muted = "🔇muted"
+label-muted = "[V] MUTE"
 format-volume-underline = ${colors.primary}
+format-muted-underline = ${colors.secondary}
 
 
 [module/filesystem]
@@ -147,15 +148,15 @@ battery = BAT0
 adapter = AC
 full-at = 96 
 
-label-charging = 0⚡%percentage%%
+label-charging = "[+]%percentage%%"
 format-charging = <label-charging>
 format-charging-underline = ${colors.primary}
 
-format-discharging-prefix = "0🔋"
+format-discharging-prefix = "[-]"
 format-discharging = <label-discharging>
 format-discharging-underline = ${colors.secondary}
 
-format-full-prefix = "0🔋" 
+format-full-prefix = "[F]" 
 format-full-underline = ${colors.primary}
 
 [module/battery1]
@@ -164,21 +165,21 @@ battery = BAT1
 adapter = AC
 full-at = 98 
 
-label-charging = 1⚡%percentage%%
+label-charging = "[+]%percentage%%"
 format-charging = <label-charging>
 format-charging-underline = ${colors.primary}
 
-format-discharging-prefix = "1🔋"
+format-discharging-prefix = "[-]"
 format-discharging = <label-discharging>
 format-discharging-underline = ${colors.secondary}
 
-format-full-prefix = "1🔋" 
+format-full-prefix = "[F]" 
 format-full-underline = ${colors.primary}
 
 [module/date]
 type = internal/date
 interval = 5
-date = " 📅 %a %m/%d/%y"
-time = " ⏰ %l:%M %P"
+date = "%a %m/%d/%y"
+time = "%l:%M %P"
 format-underline = ${colors.primary}
 label = %date% %time%
