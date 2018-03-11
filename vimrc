@@ -102,7 +102,9 @@ map 0 ^
 let g:ctrlp_map = '<c-p>'  " CtrlP main command
 let g:ctrlp_cmd = 'CtrlP' " What to execute when that's pressed
 let g:ctrlp_working_path_mode = 'ra' " Where to look for files (whole repository)
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*     " MacOSX/Linux
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+set wildignore+=*/node_modules/*
+set wildignore+=*/target/*
 
 " --------- EasyMotion bindings
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
