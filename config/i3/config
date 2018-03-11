@@ -48,7 +48,7 @@ bindsym $mod+d exec rofi -show drun $rofiopts $rofitheme
 bindsym $mod+Shift+d exec rofi -show run $rofiopts $rofitheme
 
 # start rofi to show SSH hosts
-bindsym $mod+s exec rofi -show ssh $rofiopts
+bindsym $mod+s exec rofi -show ssh $rofiopts $rofitheme
 
 # start rofi (program lanucher) in window switcher mode
 # bindsym $mod+w exec rofi -show window $rofiopts
