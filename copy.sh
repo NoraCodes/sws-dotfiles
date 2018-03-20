@@ -28,6 +28,10 @@ echo "Installing zsh completions"
 mv ~/.zfunc ~/.zfunc.bak
 ln -s $cdir/zfunc ~/.zfunc 
 
+echo "Installing zsh custom"
+mv ~/.oh-my-zsh/custom ~/.oh-my-zsh/custom.bak
+ln -s $cdir/oh-my-zsh/custom ~/.oh-my-zsh/custom
+
 echo "Installing gitconfig"
 mv ~/.gitconfig ~/.gitconfig.bak
 ln -s $cdir/gitconfig ~/.gitconfig
