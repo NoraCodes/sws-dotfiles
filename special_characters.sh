@@ -62,11 +62,11 @@ fi
 
 
 _rofi () {
-      rofi -dmenu -i -sync -theme ~/.config/i3/arthur.rasi -p "symbols:"
+      rofi -dmenu -i -sync -theme ~/.config/i3/arthur.rasi -p "sym:"
 }
 
 _dmenu () {
-   dmenu -i -l 10 -p "symbols:"
+   dmenu -i -l 10 -p "sym:"
 }
 
 
