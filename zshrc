@@ -7,13 +7,23 @@ ZSH_THEME="ys.lambda"
 # Display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(git)
+# Large history file
+HISTSIZE=1000000
+SAVEHIST=$HISTSIZE
 
-# User configuration
-export GOPATH="$HOME/projects/go-workspace"
+# Plugins.
+# Git provides Git completions; cnf is useful;
+# docker provides docker completions; tmux fixes colors in tmux
+plugins=(git command-not-found docker tmux)
+
+# Base path
+export PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+# Games path
+export PATH="$PATH:/usr/games:/usr/local/games"
+# Go and Rust binaries
+export GOPATH="$HOME/Projects/go-workspace"
 export RUSTPATH="$HOME/.cargo/"
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$GOPATH/bin:$RUSTPATH/bin"
+export PATH="$PATH:$GOPATH/bin:$RUSTPATH/bin"
 
 # Import Oh My Zsh
 source $ZSH/oh-my-zsh.sh
