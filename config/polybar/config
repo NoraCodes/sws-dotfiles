@@ -1,23 +1,32 @@
 [colors]
-# background of the bar
-background = #A4A
-# background for highlighted elements
-background-alt = #616
-
-# primary foreground color
-foreground = #DED
-# highlight foreground color
-foreground-alt = #FFF
-
 mut_red = #f36
 mut_grn = #3f6
 mut_blu = #36f
 mut_ylo = #aa2
 
-primary = ${colors.mut_grn}
-secondary = ${colors.mut_red}
+dva_beige = #f8c5ae
+dva_blue = #92baf4
+dva_blue_t = #aa92baf4
+dva_pink = #ee4bb5
+dva_pink_t = #aaee4bb5
+dva_brown = #633633
+dva_lpink = #feabe6
+
+# background of the bar
+background = ${colors.dva_pink_t}
+# background for highlighted elements
+background-alt = ${colors.dva_blue_t}
+
+# primary foreground color
+foreground = #FFF
+# highlight foreground color
+foreground-alt = #FFF
+
+
+primary = ${colors.dva_blue}
+secondary = ${colors.dva_brown}
 tertiary = ${colors.mut_blu}
-alert = ${colors.mut_red}
+alert = ${colors.dva_brown}
 error = ${colors.mut_ylo}
 
 
@@ -38,21 +47,22 @@ overline-size = 2
 overline-color = ${colors.primary}
 underline-size = 2
 underline-color = ${colors.tertiary}
-spacing = 1
-padding-left =
-padding-right =
+padding-left = 1
+padding-right = 1
 module-margin-left = 1
 module-margin-right = 1
 font-0 = "Ubuntu: size=10;0"
 font-1 = "Ubuntu Mono: size=10;0"
 #font-2 = "EmojiOne: size=10;0"
-modules-left = i3
-modules-center = cpu memory filesystem wlan eth battery0 battery1 temperature 
+modules-left = cpu memory filesystem wlan eth battery0 battery1 temperature 
+modules-center = i3
 modules-right = volume date
 tray-position = right
 tray-padding = 2
-bottom = true
+bottom = false
 wm-restack = i3
+border-bottom-size = 4
+border-bottom-color =  ${colors.dva_blue}
 
 
 [module/i3]
