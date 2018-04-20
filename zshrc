@@ -2,7 +2,7 @@
 export ZSH=/home/leo/.oh-my-zsh
 
 # Theme.
-ZSH_THEME="ys.lambda"
+ZSH_THEME="ll-compact"
 
 # Display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"

@@ -3,11 +3,11 @@
 # It is recommended to use with a dark background.
 # Colors: black, red, green, yellow, *blue, magenta, cyan, and white.
 #
-# Mar 2013 Yad Smood
+# Leo "λ" Tindall 2018
 
 # VCS
 YS_VCS_PROMPT_PREFIX1=" %{$fg[white]%}on%{$reset_color%} "
-YS_VCS_PROMPT_PREFIX2=":%{$fg[cyan]%}"
+YS_VCS_PROMPT_PREFIX2="::%{$fg[cyan]%}"
 YS_VCS_PROMPT_SUFFIX="%{$reset_color%}"
 YS_VCS_PROMPT_DIRTY=" %{$fg[red]%}x"
 YS_VCS_PROMPT_CLEAN=" %{$fg[green]%}o"
@@ -49,5 +49,5 @@ ${hg_info}\
 ${git_info}\
  \
 %{$fg[white]%} $exit_code %{$terminfo[bold]$fg[white]%}
-[%{$reset_color$fg[white]%}%!%{$terminfo[bold]$fg[white]%}] λ %{$reset_color%}"
+λ %{$reset_color%}"
 
