@@ -22,7 +22,7 @@
 # This version modified by Leo Tindall
 
 launcher="rofi" # dmenu/rofi
-character_list="$HOME/Projects/sws-dotfiles/special_character_list"
+character_list="$HOME/Projects/sws-dotfiles/data/special_character_list"
 sep=":"
 
 cd "$(dirname "$0")" || exit
