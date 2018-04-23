@@ -20,8 +20,8 @@ for_window [class="^.*"] border pixel 0
 # Gaps config
 # smart_gaps on
 smart_borders on
-gaps inner 5
-gaps outer 5
+gaps inner 2
+gaps outer 0
 
 # BINDINGS ==============================================================
 # Windows key
@@ -36,6 +36,8 @@ bindsym $mod+Return exec sakura
 # kill focused window
 bindsym $mod+Shift+q kill
 
+# notifications
+bindsym XF86Launch1 exec --no-startup-id "xfconf-query -c xfce4-notifyd -p /do-not-disturb --toggle; notify-send -t 100 \\"Do Not Disturb Off\\""
 
 # ROFI ===========
 # set $rofiopts -bw 3 -font "Noto Mono 14" -lines 4 -width 50 -show-icons -matching fuzzy 
@@ -103,23 +105,6 @@ bindsym $mod+Shift+Right move right
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
-# focus the parent container
-bindsym $mod+a focus parent
-
-# focus the child container
-#bindsym $mod+d focus child
-
-# xrandr bindings
-# fn+f7 = use VGA
-# mod+fn+f7 = don't use VGA
-# fn+f6 = use HDMI
-# mod+fn+f6 = don't use HDMI
-# mod+x move workspace to output
-bindsym XF86Display exec --no-startup-id xrandr --output VGA-1 --auto --right-of LVDS-1
-bindsym $mod+XF86Display exec --no-startup-id xrandr --output VGA-1 --off
-bindsym XF86WebCam exec --no-startup-id xrandr --output HDMI-1 --auto --right-of LVDS-1
-bindsym $mod+XF86WebCam exec --no-startup-id xrandr --output HDMI-1 --off
-
 # Mod+O Only the LVDS
 bindsym $mod+o exec xrandr -s 0
 # Mod+P HDMI extension right
@@ -131,33 +116,35 @@ bindsym $mod+shift+p exec xrandr --output VGA-1 --auto --right-of LVDS-1
 # Mod+Shift+U VGA mirror
 bindsym $mod+shift+u exec xrandr --output VGA-1 --auto --same-as LVDS-1
 
-# Move workspaces about 
+# Move workspaces about
+# Mod+X Move right
+# Mox+Shift+X Move left
 bindsym $mod+x move workspace to output right
 bindsym $mod+Shift+x move workspace to output left
 
 # switch to workspace
-bindsym $mod+1 workspace number 1 main
-bindsym $mod+2 workspace number 2 code
-bindsym $mod+3 workspace number 3 test
-bindsym $mod+4 workspace number 4 code
-bindsym $mod+5 workspace number 5 buf1
-bindsym $mod+6 workspace number 6 buf2
-bindsym $mod+7 workspace number 7 disc
-bindsym $mod+8 workspace number 8 xirc
-bindsym $mod+9 workspace number 9 mail
-bindsym $mod+0 workspace number 10 moni
+bindsym $mod+1 workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+3 workspace number 3
+bindsym $mod+4 workspace number 4
+bindsym $mod+5 workspace number 5
+bindsym $mod+6 workspace number 6
+bindsym $mod+7 workspace number 7
+bindsym $mod+8 workspace number 8
+bindsym $mod+9 workspace number 9
+bindsym $mod+0 workspace number 10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1 main
-bindsym $mod+Shift+2 move container to workspace 2 code
-bindsym $mod+Shift+3 move container to workspace 3 test
-bindsym $mod+Shift+4 move container to workspace 4 code
-bindsym $mod+Shift+5 move container to workspace 5 buf1
-bindsym $mod+Shift+6 move container to workspace 6 buf2
-bindsym $mod+Shift+7 move container to workspace 7 disc
-bindsym $mod+Shift+8 move container to workspace 8 xirc
-bindsym $mod+Shift+9 move container to workspace 9 mail
-bindsym $mod+Shift+0 move container to workspace 10 moni
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5 
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -195,10 +182,10 @@ bindsym $mod+r mode "resize"
 ## APPLICATIONS
 
 # Pin comms apps to the right
-assign [class="Discord"] 7 disc
-assign [class="Hexchat"] 8 xirc
-assign [class="TelegramDesktop"] 8 xirc
-assign [class="Thunderbird"] 9 mail
+assign [class="Discord"] 7
+assign [class="Hexchat"] 8
+assign [class="TelegramDesktop"] 8
+assign [class="Thunderbird"] 9
 
 # compositor, for transparency
 exec compton -CGb
@@ -214,8 +201,5 @@ exec_always --no-startup-id feh --bg-scale $HOME/.config/background.png
 # polybar
 exec_always --no-startup-id killall polybar; MONITOR=LVDS-1 polybar main
 
-# system monitor
-exec --no-startup-id sakura -x glances
-
 # default workspace
-exec --no-startup-id i3-msg "workspace 1 main"
+exec --no-startup-id i3-msg "workspace 1"

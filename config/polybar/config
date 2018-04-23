@@ -1,4 +1,8 @@
 [colors]
+red = #f00
+grn = #0f0
+blu = #00f
+
 mut_red = #f36
 mut_grn = #3f6
 mut_blu = #36f
@@ -15,7 +19,7 @@ dva_lpink = #feabe6
 # background of the bar
 background = ${colors.dva_pink_t}
 # background for highlighted elements
-background-alt = ${colors.dva_blue_t}
+background-alt = ${colors.dva_blue}
 
 # primary foreground color
 foreground = #FFF
@@ -24,9 +28,9 @@ foreground-alt = #FFF
 
 
 primary = ${colors.dva_blue}
-secondary = ${colors.dva_brown}
+secondary = ${colors.red}
 tertiary = ${colors.mut_blu}
-alert = ${colors.dva_brown}
+alert = ${colors.mut_red}
 error = ${colors.mut_ylo}
 
 
@@ -51,19 +55,24 @@ padding-left = 1
 padding-right = 1
 module-margin-left = 1
 module-margin-right = 1
-font-0 = "Ubuntu: size=10;0"
-font-1 = "Ubuntu Mono: size=10;0"
+font-0 = "Ubuntu Mono: size=10;0"
+font-1 = "Ubuntu: size=10;0"
 #font-2 = "EmojiOne: size=10;0"
-modules-left = cpu memory filesystem wlan eth battery0 battery1 temperature 
-modules-center = i3
-modules-right = volume date
-tray-position = right
-tray-padding = 2
-bottom = false
-wm-restack = i3
-border-bottom-size = 4
-border-bottom-color =  ${colors.dva_blue}
+# A more crowded version
+# modules-left = cpu memory filesystem wlan eth battery0 battery1 temperature 
+# modules-center = i3
+# modules-right = volume date
 
+# A cleaner version
+modules-left = date battery0 battery1 volume wlan eth
+modules-center =
+modules-right = i3 
+tray-position = center
+tray-padding = 2
+bottom = true
+wm-restack = i3
+border-bottom-size = 2
+border-bottom-color =  ${colors.dva_blue}
 
 [module/i3]
 type = internal/i3
@@ -96,13 +105,12 @@ label-visible-padding = 2
 [module/volume]
 type = internal/volume
 format-volume = <label-volume>
-label-volume = "[V]  %percentage%%"
+label-volume = "[V]%percentage%%"
 label-volume-foreground = ${root.foreground}
 format-muted-foreground = ${colors.foreground}
-label-muted = "[V] MUTE"
+label-muted = "[V]MUTE"
 format-volume-underline = ${colors.primary}
 format-muted-underline = ${colors.secondary}
-
 
 [module/filesystem]
 type = internal/fs
@@ -113,7 +121,6 @@ label-unmounted = %mountpoint%: not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 format-mounted-underline = ${colors.primary}
 
-
 [module/memory]
 type = internal/memory
 interval = 2
@@ -121,7 +128,6 @@ format-prefix = "RAM "
 format-prefix-foreground = ${colors.foreground}
 format-underline = ${colors.primary}
 label = %percentage_used%%
-
 
 [module/cpu]
 type = internal/cpu
@@ -149,8 +155,8 @@ interval = 5
 format-connected = <label-connected>
 format-connected-underline = ${colors.primary}
 format-disconnected-underline = ${colors.alert}
-label-connected = "WiFi: %essid%"
-label-disconnected = "WiFi: down"
+label-connected = "[W]%essid%"
+label-disconnected = "[W]DOWN"
 label-disconnected-foreground = ${colors.foreground-alt}
 
 [module/eth]
@@ -158,11 +164,11 @@ type = internal/network
 interface = enp0s25
 interval = 5
 format-connected-underline = ${colors.primary}
-format-connected-prefix = "Eth: "
+format-connected-prefix = "[E]"
 format-connected-foreground-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
 format-disconnected-underline = ${colors.alert}
-label-disconnected = "Eth: down"
+label-disconnected = "[E]DOWN"
 label-disconnected-foreground = ${colors.foreground-alt}
 
 [module/battery0]
@@ -171,15 +177,15 @@ battery = BAT0
 adapter = AC
 full-at = 96 
 
-label-charging = "[+]%percentage%%"
+label-charging = "[0+]%percentage%%"
 format-charging = <label-charging>
 format-charging-underline = ${colors.primary}
 
-format-discharging-prefix = "[-]"
+format-discharging-prefix = "[0-]"
 format-discharging = <label-discharging>
 format-discharging-underline = ${colors.secondary}
 
-format-full-prefix = "[F]" 
+format-full-prefix = "[0F]" 
 format-full-underline = ${colors.primary}
 
 [module/battery1]
@@ -188,15 +194,15 @@ battery = BAT1
 adapter = AC
 full-at = 98 
 
-label-charging = "[+]%percentage%%"
+label-charging = "[1+]%percentage%%"
 format-charging = <label-charging>
 format-charging-underline = ${colors.primary}
 
-format-discharging-prefix = "[-]"
+format-discharging-prefix = "[1-]"
 format-discharging = <label-discharging>
 format-discharging-underline = ${colors.secondary}
 
-format-full-prefix = "[F]" 
+format-full-prefix = "[1F]" 
 format-full-underline = ${colors.primary}
 
 [module/date]
