@@ -20,7 +20,7 @@ for_window [class="^.*"] border pixel 0
 # Gaps config
 # smart_gaps on
 smart_borders on
-gaps inner 2
+gaps inner 6
 gaps outer 0
 
 # BINDINGS ==============================================================
@@ -42,7 +42,7 @@ bindsym XF86Launch1 exec --no-startup-id "xfconf-query -c xfce4-notifyd -p /do-n
 # ROFI ===========
 # set $rofiopts -bw 3 -font "Noto Mono 14" -lines 4 -width 50 -show-icons -matching fuzzy 
 set $rofiopts -show-icons -matching fuzzy
-set $rofitheme -theme ~/.config/i3/arthur.rasi
+set $rofitheme -theme ~/.config/i3/arthur-c.rasi
 
 # start rofi (program launcher) in desktop files mode
 bindsym $mod+d exec rofi -show drun $rofiopts $rofitheme
@@ -188,7 +188,7 @@ assign [class="TelegramDesktop"] 8
 assign [class="Thunderbird"] 9
 
 # compositor, for transparency
-exec compton -CGb
+# exec compton -CGb
 
 # background
 # exec_always --no-startup-id variety -n
