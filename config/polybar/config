@@ -8,18 +8,16 @@ mut_grn = #3f6
 mut_blu = #36f
 mut_ylo = #aa2
 
-dva_beige = #f8c5ae
-dva_blue = #92baf4
-dva_blue_t = #aa92baf4
-dva_pink = #ee4bb5
-dva_pink_t = #aaee4bb5
-dva_brown = #633633
-dva_lpink = #feabe6
+cs_light = #ffe5b6
+cs_midlight = #ffdb99
+cs_mid = #ffd992
+cs_middark = #d3b57f
+cs_dark = #595143
 
 # background of the bar
-background = ${colors.dva_pink_t}
+background = ${colors.cs_dark}
 # background for highlighted elements
-background-alt = ${colors.dva_blue}
+background-alt = ${colors.mut_red}
 
 # primary foreground color
 foreground = #FFF
@@ -27,9 +25,9 @@ foreground = #FFF
 foreground-alt = #FFF
 
 
-primary = ${colors.dva_blue}
-secondary = ${colors.red}
-tertiary = ${colors.mut_blu}
+primary = ${colors.mut_blu}
+secondary = ${colors.mut_grn}
+tertiary = ${colors.mut_red}
 alert = ${colors.mut_red}
 error = ${colors.mut_ylo}
 
@@ -71,8 +69,7 @@ tray-position = center
 tray-padding = 2
 bottom = true
 wm-restack = i3
-border-bottom-size = 2
-border-bottom-color =  ${colors.dva_blue}
+border-bottom-size = 0
 
 [module/i3]
 type = internal/i3
@@ -86,7 +83,7 @@ label-mode-foreground = ${colors.foreground-alt}
 label-mode-background = ${colors.alert}
 
 label-focused = %name%
-label-focused-background = ${colors.background-alt}
+label-focused-background = ${colors.primary}
 label-focused-underline = ${colors.primary}
 label-focused-padding = 2
 
