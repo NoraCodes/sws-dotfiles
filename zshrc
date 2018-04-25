@@ -46,12 +46,12 @@ if ! type "$exa" > /dev/null; then
 fi
 
 # added by travis gem
-[ -f /home/leo/.travis/travis.sh ] && source /home/leo/.travis/travis.sh
+#[ -f /home/leo/.travis/travis.sh ] && source /home/leo/.travis/travis.sh
 
 # To execute on new shell creation
 #   Cowsay~
 # fortune | cowsay -f $(ls /usr/share/cowsay/cows/ | shuf -n1)
-fortune | boxes -d columns 
-echo .
-mdt8 status
+#fortune | boxes -d columns 
+#echo .
+#mdt8 status
 
