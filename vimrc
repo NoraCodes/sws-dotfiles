@@ -41,7 +41,7 @@ set noswapfile
 
 " User Interface  ---------------------------------------------------
 syntax enable
-set background=dark
+set background=light
 " --------- Matching enclosures
 set showmatch " Highlight matching parens
 set mat=2 " Blink matching parents 
