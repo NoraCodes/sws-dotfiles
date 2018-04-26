@@ -13,13 +13,10 @@ sakura
 glances
 
 anonymous-pro ttf-dejavu ttf-dejavu-extra fonts-emojione-svginot
+fonts-firacode
 
 
 i3
 polybar
 unifont
-# variety http://peterlevi.com/variety/
-# emojione https://github.com/eosrei/emojione-color-font/releases/
-# ion shell
-# cargo install --git https://github.com/redox-os/ion/
 

@@ -55,21 +55,45 @@ module-margin-left = 1
 module-margin-right = 1
 font-0 = "Ubuntu Mono: size=10;0"
 font-1 = "Ubuntu: size=10;0"
-#font-2 = "EmojiOne: size=10;0"
+font-2 = "FontAwesome: size=10;0"
+
 # A more crowded version
-# modules-left = cpu memory filesystem wlan eth battery0 battery1 temperature 
-# modules-center = i3
-# modules-right = volume date
+modules-center = i3 
+modules-right = volume wlan eth date battery0 battery1
+modules-left = lsb kernel up cpu memory filesystem
 
 # A cleaner version
-modules-left = date battery0 battery1 volume wlan eth
-modules-center =
-modules-right = i3 
-tray-position = center
-tray-padding = 2
+#modules-center =
+#modules-left = i3 
+#modules-right = date battery0 battery1 volume wlan eth
+
+# Tray config. Uncomment to enable system tray.
+#tray-position = right
+#tray-padding = 2
+
 bottom = true
 wm-restack = i3
 border-bottom-size = 0
+
+[module/kernel]
+type = custom/script
+exec = uname -r
+tail = false
+interval = 1024
+format-underline = ${colors.primary}
+
+[module/lsb]
+type = custom/script
+exec = (lsb_release -d | awk {'print $2" "$3'})
+tail = false
+interval = 1024
+format-underline = ${colors.primary}
+
+[module/up]
+type = custom/script
+exec = uptime | awk -F, '{sub(".*up ",x,$1);print $1}'
+label = Up %output%
+format-underline = ${colors.primary}
 
 [module/i3]
 type = internal/i3
@@ -85,18 +109,18 @@ label-mode-background = ${colors.alert}
 label-focused = %name%
 label-focused-background = ${colors.primary}
 label-focused-underline = ${colors.primary}
-label-focused-padding = 2
+label-focused-padding = 1
 
 label-unfocused = %name%
-label-unfocused-padding = 2
+label-unfocused-padding = 1
 
 label-urgent = %name%
 label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
+label-urgent-padding = 1
 
 label-visible = %name%
-label-visible-foreground = 2
-label-visible-padding = 2
+label-visible-foreground = 1
+label-visible-padding = 1
 
 
 [module/volume]
@@ -209,3 +233,11 @@ date = "%a %m/%d/%y"
 time = "%l:%M %P"
 format-underline = ${colors.primary}
 label = %date% %time%
+
+[module/backlight]
+type = internal/xbacklight
+output = ${env:MONITOR}
+label = [B] %percentage%%
+
+
+
