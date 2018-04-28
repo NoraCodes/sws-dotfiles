@@ -6,7 +6,7 @@ echo $cdir
 
 echo "Installing background"
 mv ~/.config/background.png ~/.config/background.png.bak
-ln -s $cdir/config/background.png ~/.config/background.png
+ln -s $cdir/.config/background.png ~/.config/background.png
 
 echo "Installing vimrc"
 mv ~/.vimrc ~/.vimrc.bak
