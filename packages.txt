@@ -12,7 +12,8 @@ zsh
 sakura
 glances
 
-anonymous-pro ttf-dejavu ttf-dejavu-extra fonts-emojione-svginot
+anonymous-pro ttf-dejavu ttf-dejavu-extra 
+fonts-emojione fonts-noto-color-emoji fonts-symbola
 fonts-firacode
 
 

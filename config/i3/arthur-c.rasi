@@ -7,11 +7,11 @@
 configuration {
 
     // The display name of this browser
-    display-ssh:                   "ssh";
-    display-run:                   "run";
-    display-drun:                  "drun";
-    display-window:                "win";
-    display-combi:                 "comb";
+    display-ssh:                   "ssh: ";
+    display-run:                   "run: ";
+    display-drun:                  "drun: ";
+    display-window:                "win: ";
+    display-combi:                 "comb: ";
     show-icons: true;
 }
 

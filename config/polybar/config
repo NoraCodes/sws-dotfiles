@@ -53,13 +53,12 @@ padding-left = 1
 padding-right = 1
 module-margin-left = 1
 module-margin-right = 1
-font-0 = "Ubuntu Mono: size=10;0"
-font-1 = "Ubuntu: size=10;0"
-font-2 = "FontAwesome: size=10;0"
+font-0 = "mono: size=10;0"
+font-1 = "Symbola: size=10;0"
 
 # A more crowded version
 modules-center = i3 
-modules-right = volume wlan eth date battery0 battery1
+modules-right = volume wlan eth battery0 battery1 date 
 modules-left = lsb kernel up cpu memory filesystem
 
 # A cleaner version
@@ -68,8 +67,8 @@ modules-left = lsb kernel up cpu memory filesystem
 #modules-right = date battery0 battery1 volume wlan eth
 
 # Tray config. Uncomment to enable system tray.
-#tray-position = right
-#tray-padding = 2
+tray-position = right
+tray-padding = 2
 
 bottom = true
 wm-restack = i3
@@ -126,10 +125,10 @@ label-visible-padding = 1
 [module/volume]
 type = internal/volume
 format-volume = <label-volume>
-label-volume = "[V]%percentage%%"
+label-volume = "🔊"
 label-volume-foreground = ${root.foreground}
 format-muted-foreground = ${colors.foreground}
-label-muted = "[V]MUTE"
+label-muted = "🔇"
 format-volume-underline = ${colors.primary}
 format-muted-underline = ${colors.secondary}
 
@@ -176,8 +175,8 @@ interval = 5
 format-connected = <label-connected>
 format-connected-underline = ${colors.primary}
 format-disconnected-underline = ${colors.alert}
-label-connected = "[W]%essid%"
-label-disconnected = "[W]DOWN"
+label-connected = "📡 %essid%"
+label-disconnected = "📡 DOWN"
 label-disconnected-foreground = ${colors.foreground-alt}
 
 [module/eth]
@@ -185,11 +184,11 @@ type = internal/network
 interface = enp0s25
 interval = 5
 format-connected-underline = ${colors.primary}
-format-connected-prefix = "[E]"
+format-connected-prefix = "🖧 "
 format-connected-foreground-foreground = ${colors.foreground-alt}
-label-connected = %local_ip%
+label-connected = %linkspeed%
 format-disconnected-underline = ${colors.alert}
-label-disconnected = "[E]DOWN"
+label-disconnected = "🖧 DOWN"
 label-disconnected-foreground = ${colors.foreground-alt}
 
 [module/battery0]
@@ -198,15 +197,15 @@ battery = BAT0
 adapter = AC
 full-at = 96 
 
-label-charging = "[0+]%percentage%%"
+label-charging = "🔋 %percentage%%"
 format-charging = <label-charging>
 format-charging-underline = ${colors.primary}
 
-format-discharging-prefix = "[0-]"
+format-discharging-prefix = "🔋 "
 format-discharging = <label-discharging>
 format-discharging-underline = ${colors.secondary}
 
-format-full-prefix = "[0F]" 
+format-full-prefix = "🔋 " 
 format-full-underline = ${colors.primary}
 
 [module/battery1]
@@ -215,15 +214,15 @@ battery = BAT1
 adapter = AC
 full-at = 98 
 
-label-charging = "[1+]%percentage%%"
+label-charging = "🔋 %percentage%%"
 format-charging = <label-charging>
 format-charging-underline = ${colors.primary}
 
-format-discharging-prefix = "[1-]"
+format-discharging-prefix = "🔋 "
 format-discharging = <label-discharging>
 format-discharging-underline = ${colors.secondary}
 
-format-full-prefix = "[1F]" 
+format-full-prefix = "🔋 " 
 format-full-underline = ${colors.primary}
 
 [module/date]
@@ -232,12 +231,12 @@ interval = 5
 date = "%a %m/%d/%y"
 time = "%l:%M %P"
 format-underline = ${colors.primary}
-label = %date% %time%
+label = 📅 %date% 🕓%time%
 
 [module/backlight]
 type = internal/xbacklight
 output = ${env:MONITOR}
-label = [B] %percentage%%
+label =☀%percentage%%
 
 
 

@@ -62,7 +62,7 @@ fi
 
 
 _rofi () {
-      rofi -dmenu -i -sync -theme ~/.config/i3/arthur.rasi -p "sym:"
+      rofi -dmenu -i -sync -theme ~/.config/i3/arthur-c.rasi -p "sym:"
 }
 
 _dmenu () {
