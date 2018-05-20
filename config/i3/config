@@ -37,7 +37,7 @@ bindsym $mod+Return exec sakura
 bindsym $mod+Shift+q kill
 
 # notifications
-bindsym XF86Launch1 exec --no-startup-id "xfconf-query -c xfce4-notifyd -p /do-not-disturb --toggle; notify-send -t 100 \\"Do Not Disturb Off\\""
+bindsym XF86Launch1 exec --no-startup-id "xfconf-query -c xfce4-notifyd -p /do-not-disturb --toggle; notify-send \\"Do Not Disturb Off\\""
 
 # ROFI ===========
 # set $rofiopts -bw 3 -font "Noto Mono 14" -lines 4 -width 50 -show-icons -matching fuzzy 
