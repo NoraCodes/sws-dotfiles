@@ -175,21 +175,24 @@ interval = 5
 format-connected = <label-connected>
 format-connected-underline = ${colors.primary}
 format-disconnected-underline = ${colors.alert}
-label-connected = "📡 %essid%"
-label-disconnected = "📡 DOWN"
-label-disconnected-foreground = ${colors.foreground-alt}
+# label-connected = "📡 %essid%"
+# label-disconnected = "📡 DOWN"
+label-connected = "📡"
+label-disconnected = "📡"
 
 [module/eth]
 type = internal/network
 interface = enp0s25
 interval = 5
 format-connected-underline = ${colors.primary}
-format-connected-prefix = "🖧 "
 format-connected-foreground-foreground = ${colors.foreground-alt}
-label-connected = %linkspeed%
 format-disconnected-underline = ${colors.alert}
-label-disconnected = "🖧 DOWN"
 label-disconnected-foreground = ${colors.foreground-alt}
+# label-connected = "🖧  %linkspeed%"
+# label-disconnected = "🖧 DOWN"
+label-connected = 🖧 
+label-disconnected = "🖧"
+
 
 [module/battery0]
 type = internal/battery
@@ -197,7 +200,7 @@ battery = BAT0
 adapter = AC
 full-at = 96 
 
-label-charging = "🔋 %percentage%%"
+label-charging = "⚡ %percentage%"
 format-charging = <label-charging>
 format-charging-underline = ${colors.primary}
 
@@ -205,16 +208,16 @@ format-discharging-prefix = "🔋 "
 format-discharging = <label-discharging>
 format-discharging-underline = ${colors.secondary}
 
-format-full-prefix = "🔋 " 
+format-full-prefix = "🔌 " 
 format-full-underline = ${colors.primary}
 
 [module/battery1]
 type = internal/battery
 battery = BAT1
 adapter = AC
-full-at = 98 
+full-at = 96 
 
-label-charging = "🔋 %percentage%%"
+label-charging = "⚡ %percentage%"
 format-charging = <label-charging>
 format-charging-underline = ${colors.primary}
 
@@ -222,16 +225,16 @@ format-discharging-prefix = "🔋 "
 format-discharging = <label-discharging>
 format-discharging-underline = ${colors.secondary}
 
-format-full-prefix = "🔋 " 
+format-full-prefix = "🔌 " 
 format-full-underline = ${colors.primary}
 
 [module/date]
 type = internal/date
 interval = 5
-date = "%a %m/%d/%y"
-time = "%l:%M %P"
+date = "%a %F" 
+time = "%H:%M"
 format-underline = ${colors.primary}
-label = 📅 %date% 🕓%time%
+label = 📅 %date% 🕓 %time%
 
 [module/backlight]
 type = internal/xbacklight
