@@ -42,6 +42,8 @@ set noswapfile
 " User Interface  ---------------------------------------------------
 syntax enable
 set background=light
+colorscheme default
+
 " --------- Matching enclosures
 set showmatch " Highlight matching parens
 set mat=2 " Blink matching parents 
@@ -54,7 +56,7 @@ set colorcolumn=90 " Guard at line 90
 let $LANG='en'
 set langmenu=en
 " --------- Wildmenu
-set wildmenu
+set wildmenu " completion for the command line
 " --------- Errors
 set noerrorbells
 set novisualbell
