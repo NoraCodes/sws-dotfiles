@@ -1,18 +1,34 @@
 [colors]
-red = #f00
-grn = #0f0
-blu = #00f
+red =           #f00
+grn =           #0f0
+blu =           #00f
 
-mut_red = #f36
-mut_grn = #3f6
-mut_blu = #36f
-mut_ylo = #aa2
+mut_red =       #F76089
+# Bright Pink
 
-cs_light = #ffe5b6
-cs_midlight = #ffdb99
-cs_mid = #ffd992
-cs_middark = #d3b57f
-cs_dark = #595143
+mut_grn =       #A5FF90
+# Mint Green
+
+mut_blu =       #15669B
+# Matisse
+
+mut_ylo =       #FFC600
+# Supernova
+
+cs_light =      #9EFFFF 
+# Ice Cold
+
+cs_midlight =   #0D3A58
+# Nile Blue
+
+cs_mid =        #193549
+# Elephant
+
+cs_middark =    #122738
+# Big Stone
+
+cs_dark =       #15232D
+# Shark
 
 # background of the bar
 background = ${colors.cs_dark}
@@ -31,7 +47,6 @@ tertiary = ${colors.mut_red}
 alert = ${colors.mut_red}
 error = ${colors.mut_ylo}
 
-
 [global/wm]
 margin-top = 3
 margin-bottom = 3
@@ -40,7 +55,7 @@ margin-bottom = 3
 # Set monitor to the MONITOR env var
 monitor = ${env:MONITOR}
 width = 100%
-height = 24
+height = 18
 offset-x = 0
 offset-y = 0
 background = ${colors.background}
@@ -53,18 +68,18 @@ padding-left = 1
 padding-right = 1
 module-margin-left = 1
 module-margin-right = 1
-font-0 = "mono: size=10;0"
-font-1 = "Symbola: size=10;0"
+font-0 = "mono: size=8;0"
+font-1 = "Symbola: size=8;0"
 
 # A more crowded version
-modules-center = i3 
-modules-right = volume wlan eth battery0 battery1 date 
-modules-left = lsb kernel up cpu memory filesystem
+# modules-center = i3 
+# modules-right = volume wlan eth battery0 battery1 date 
+# modules-left = lsb kernel up cpu memory filesystem
 
 # A cleaner version
-#modules-center =
-#modules-left = i3 
-#modules-right = date battery0 battery1 volume wlan eth
+modules-left = date cpu 
+modules-center = i3 
+modules-right = battery0 battery1 volume wlan eth
 
 # Tray config. Uncomment to enable system tray.
 tray-position = right
@@ -83,7 +98,7 @@ format-underline = ${colors.primary}
 
 [module/lsb]
 type = custom/script
-exec = (lsb_release -d | awk {'print $2" "$3'})
+exec = (lsb_release -d | awk {'print $3'})
 tail = false
 interval = 1024
 format-underline = ${colors.primary}
@@ -91,7 +106,7 @@ format-underline = ${colors.primary}
 [module/up]
 type = custom/script
 exec = uptime | awk -F, '{sub(".*up ",x,$1);print $1}'
-label = Up %output%
+label = %output%
 format-underline = ${colors.primary}
 
 [module/i3]
@@ -144,18 +159,27 @@ format-mounted-underline = ${colors.primary}
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = "RAM "
+format-prefix =
 format-prefix-foreground = ${colors.foreground}
 format-underline = ${colors.primary}
-label = %percentage_used%%
+label = "%gb_free%"
 
 [module/cpu]
 type = internal/cpu
-interval = 1
-format-prefix = "CPU "
+interval = 0.5
+format-prefix = 
 format-prefix-foreground = ${colors.foreground}
+format = <ramp-coreload>
 format-underline = ${colors.primary}
-label = %percentage%%
+label = CPU %percentage%%
+ramp-coreload-0 = ▁
+ramp-coreload-1 = ▂
+ramp-coreload-2 = ▃
+ramp-coreload-3 = ▄
+ramp-coreload-4 = ▅
+ramp-coreload-5 = ▆
+ramp-coreload-6 = ▇
+ramp-coreload-7 = █
 
 [module/temperature]
 type = internal/temperature
@@ -231,10 +255,10 @@ format-full-underline = ${colors.primary}
 [module/date]
 type = internal/date
 interval = 5
-date = "%a %F" 
+date = "%A, %d of %B, %Y" 
 time = "%H:%M"
 format-underline = ${colors.primary}
-label = 📅 %date% 🕓 %time%
+label = %time% on %date% 
 
 [module/backlight]
 type = internal/xbacklight

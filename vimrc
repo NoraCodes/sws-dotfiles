@@ -41,7 +41,7 @@ set noswapfile
 
 " User Interface  ---------------------------------------------------
 syntax enable
-set background=light
+set background=dark
 colorscheme default
 
 " --------- Matching enclosures
@@ -51,7 +51,8 @@ set mat=2 " Blink matching parents
 set number " Show line numbers
 set relativenumber " Relative numbers for all but the current line
 set cursorline " Add an indicator for the current line
-set colorcolumn=90 " Guard at line 90
+set colorcolumn=90 " Guard at line 90, yellow light
+highlight ColorColumn ctermbg=3*
 " --------- Language
 let $LANG='en'
 set langmenu=en
