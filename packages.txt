@@ -1,6 +1,5 @@
 git
 curl
-hexchat
 mono-complete
 mono-mcs
 python-pip
@@ -12,6 +11,8 @@ zsh
 sakura
 glances
 xdotool
+hexchat
+stow
 
 anonymous-pro ttf-dejavu ttf-dejavu-extra 
 fonts-emojione fonts-noto-color-emoji fonts-symbola
