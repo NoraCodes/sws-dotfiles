@@ -14,7 +14,7 @@ SAVEHIST=$HISTSIZE
 # Plugins.
 # Git provides Git completions; cnf is useful;
 # docker provides docker completions; tmux fixes colors in tmux
-plugins=(git command-not-found docker tmux)
+plugins=(git docker tmux)
 
 # Base path
 export PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
