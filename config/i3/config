@@ -184,8 +184,9 @@ bindsym $mod+r mode "resize"
 # Pin comms apps to the right
 assign [class="Discord"] 7
 assign [class="Hexchat"] 8
-assign [class="TelegramDesktop"] 8
-assign [class="Thunderbird"] 9
+assign [class="TelegramDesktop"] 9
+assign [class="Slack"] 9
+assign [class="Thunderbird"] 10
 
 # compositor, for transparency
 # exec compton -CGb
