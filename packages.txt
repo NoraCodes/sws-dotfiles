@@ -11,11 +11,11 @@ vim
 zsh
 sakura
 glances
+xdotool
 
 anonymous-pro ttf-dejavu ttf-dejavu-extra 
 fonts-emojione fonts-noto-color-emoji fonts-symbola
 fonts-firacode
-
 
 i3
 polybar

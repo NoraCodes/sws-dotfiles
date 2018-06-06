@@ -116,3 +116,5 @@ export LC_ALL="en_US.UTF_8"
 alias fdate="date +%y.%m.%d"
 
 export TERM="screen-256color"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

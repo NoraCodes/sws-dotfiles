@@ -55,3 +55,11 @@ fi
 #echo .
 #mdt8 status
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/leo/Software/google-cloud-sdk/path.zsh.inc' ]; then source '/home/leo/Software/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/leo/Software/google-cloud-sdk/completion.zsh.inc' ]; then source '/home/leo/Software/google-cloud-sdk/completion.zsh.inc'; fi
