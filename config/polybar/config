@@ -77,7 +77,7 @@ font-1 = "Symbola: size=8;0"
 # modules-left = lsb kernel up cpu memory filesystem
 
 # A cleaner version
-modules-left = date cpu 
+modules-left = date cpu memory
 modules-center = i3 
 modules-right = battery0 battery1 volume wlan eth
 
