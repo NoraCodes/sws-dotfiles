@@ -7,3 +7,8 @@ convert -size 1920x1080 xc:#ffe5b6 background.png
 Install betterdiscord with snap version
 sudo betterdiscordctl install -v -c -d "/snap/discord/current/usr/share/discord" -m /home/leo/snap/discord/current/.config/discord/0.0.5/modules
 
+Compute mean of a single column with AWK
+    awk 'BEGIN{s=0;}{s=s+$1;}END{print s/NR;}' file
+Compute std. dev. of a single column with AWK
+    awk '{sum+=$1; sumsq+=$1*$1} END {print sqrt(sumsq/NR - (sum/NR)^2)}' file
+
