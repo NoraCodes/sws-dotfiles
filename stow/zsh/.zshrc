@@ -16,23 +16,13 @@ SAVEHIST=$HISTSIZE
 # docker provides docker completions; tmux fixes colors in tmux
 plugins=(git docker tmux)
 
-# Base path
-export PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-# Games path
-export PATH="$PATH:/usr/games:/usr/local/games"
-# Go and Rust binaries
-export GOPATH="$HOME/Projects/go-workspace"
-export RUSTPATH="$HOME/.cargo/"
-export PATH="$PATH:$GOPATH/bin:$RUSTPATH/bin"
-# .bin for my own scripts
-export PATH="$PATH:$HOME/.bin"
-
 # Import Oh My Zsh
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
-export EDITOR='vim'
+export EDITOR="vim"
+#export EDITOR='emacsclient -c --alternate-editor=""'
 
 # Tmux fixes. Enables 256 colors.
 alias tmux='tmux -2'
@@ -46,6 +36,8 @@ compinit
 if ! type "$exa" > /dev/null; then
     alias ls=exa
 fi
+
+alias emacs emacsclient -c --alternate-editor=""
 
 # added by travis gem
 #[ -f /home/leo/.travis/travis.sh ] && source /home/leo/.travis/travis.sh
