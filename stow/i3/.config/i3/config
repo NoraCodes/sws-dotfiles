@@ -105,7 +105,9 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+space focus mode_toggle
 
 # Mod+O Only the LVDS
-bindsym $mod+o exec xrandr -s 0
+bindsym $mod+o exec xrandr --output VGA-1 --off --output HDMI-1 --off --output LVDS-1 --auto --primary
+# Mod+Shift+O Only the VGA
+bindsym $mod+shift+o exec xrandr --output LVDS-1 --off --output VGA-1 --auto --primary
 # Mod+P HDMI extension right
 bindsym $mod+p exec xrandr --output HDMI-1 --auto --right-of LVDS-1
 # Mod+U HDMI mirror
@@ -199,7 +201,7 @@ assign [class="Thunderbird"] 10
 exec_always --no-startup-id feh --bg-scale $HOME/.config/background.png
 
 # polybar
-exec_always --no-startup-id killall polybar; MONITOR=LVDS-1 polybar main
+exec_always --no-startup-id killall polybar; MONITOR=$(xrandr | grep " connected primary" | cut -d" " -f1) polybar main
 
 # default workspace
 exec --no-startup-id i3-msg "workspace 1"
